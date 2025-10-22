@@ -1,0 +1,351 @@
+/* ---------------------------  Back to Top Button -------------------------------- */
+#back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  display: none; /* Initially hidden */
+  animation: dropFromTop 0.6s ease-out forwards; /* Drop animation */
+  transform: translateY(-100vh); /* Off-screen initially */
+}
+
+@keyframes dropFromTop {
+  0% {
+    transform: translateY(-100vh); /* Starts from above the viewport */
+  }
+  100% {
+    transform: translateY(0); /* Drops to original position */
+  }
+}
+
+#back-to-top.show {
+  display: block; /* Show button when scrolled */
+}
+
+/* --------------------------- Navbar Button -------------------------------- */
+/* For the active page link in the navbar */
+.navbar-nav .nav-item .active {
+  color: #be9634; /* Text color for active link */
+  position: relative;
+}
+
+/* Active state underline */
+.navbar-nav .nav-item .active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px; /* Adjust this based on the space you need */
+  height: 2px; /* Thickness of the underline */
+  background-color: #be9634; /* Underline color */
+  width: 100%; /* Full width underline */
+}
+
+/* Hover underline */
+.navbar-nav .nav-item .nav-link {
+  position: relative;
+}
+
+.navbar-nav .nav-item .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust based on the required space */
+  height: 2px;
+  width: 0; /* Start with no width */
+  background-color: #be9634; /* Color of the hover underline */
+  transition: width 0.2s ease-in-out;
+}
+
+/* Expand the underline on hover */
+.navbar-nav .nav-item .nav-link:hover::before {
+  width: 100%;
+}
+
+/* Ensuring hover effect doesn't interfere with the active link */
+.navbar-nav .nav-item .active:hover::before {
+  width: 0; /* Disable hover underline for active link */
+}
+
+/* Button styles */
+.navbar_btn {
+  background-color: #be9342; /* Your theme's background color */
+  color: #ffffff; /* Text color */
+  border: 0px; /* Your custom border color */
+  padding: 8px 12px; /* Adjust the padding */
+  font-weight: 400; /* Bold text */
+  font-size: 13px; /* Font size */
+  transition: all 0.3s ease; /* Add a smooth transition */
+  border-color: none;
+}
+
+.navbar_btn:hover {
+  background-color: #fff; /* Background color on hover */
+  color: #be9342; /* Text color on hover */
+  border-color: 2px solid #be9342 !important; /* Border color on hover */
+}
+
+@media (max-width: 900px) {
+  .nav_button {
+    margin-bottom: 20px;
+  }
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  /* border-bottom: 1px solid rgba(190, 147, 66, 0.3); */
+}
+
+.navbar .nav-item .nav-link {
+  color: #fff;
+}
+
+/* Sticky state: white background and black text */
+.navbar.is-sticky {
+  background-color: white;
+}
+
+.navbar.is-sticky .nav-item .nav-link {
+  color: black;
+}
+
+.navbar.is-sticky .navbar-brand img {
+  filter: none; /* Normal logo color */
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    background-color: white; /* Ensure navbar is white on mobile */
+  }
+
+  .navbar .nav-item .nav-link {
+    color: black; /* Change text color to black */
+  }
+
+  /* Sticky state applied */
+  .navbar.is-sticky {
+    background-color: white;
+  }
+
+  .navbar.is-sticky .nav-item .nav-link {
+    color: black;
+  }
+
+  .navbar.is-sticky .navbar-brand img {
+    filter: none;
+  }
+}
+
+/* ---------------------------         Homepage content css -------------------------------- */
+
+.homecomponent {
+  width: 500px;
+}
+
+.homecomponent h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  line-height: 4rem;
+}
+
+.custom-heading {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  color: #be9342; /* Custom color for text */
+  letter-spacing: 0.08em; /* Custom letter spacing */
+  width: 100%; /* Ensure it adjusts on smaller screens */
+  line-height: 5rem; /* Default line height */
+  font-size: 60px; /* Font size */
+  font-weight: bold; /* Bold font weight */
+  text-align: left; /* Align text to the start */
+  word-break: break-word; /* Ensure the text breaks naturally */
+}
+
+@media only screen and (max-width: 768px) {
+  .custom-heading {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    line-height: 3rem; /* Adjust line height for smaller screens */
+  }
+
+  .homecomponent {
+    width: 330px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .custom-heading {
+    font-size: 50px; /* Larger size for larger screens */
+    line-height: 4rem; /* Default line height */
+  }
+}
+
+/* Aboutus.css */
+
+.learn-more-btn {
+  background-color: #be9342; /* Custom background color */
+  border: none; /* No border by default */
+  color: #ffffff;
+  width: 230px;
+  height: auto;
+  padding: 12px 24px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 0; /* Ensures no rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    border-color 0.3s ease; /* Added transition for border-color */
+}
+
+.learn-more-btn:hover {
+  background-color: #ffffff; /* Change to white on hover */
+  color: #be9342; /* Change text color on hover */
+  box-shadow: inset 0 0 0 2px #be9342;
+}
+/* ---------------------------   Service Animation css      -------------------------------- */
+.service-box {
+  opacity: 0; /* Start as invisible */
+  transform: translateY(50px); /* Start slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+}
+
+.service-box.visible {
+  opacity: 1; /* Become visible */
+  transform: translateY(0); /* Move to original position */
+}
+/* ---------------------------   About us Animation css      -------------------------------- */
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.image-slide-in {
+  animation: slideInLeft 0.5s ease forwards; /* Image slides in from the left */
+}
+
+.text-slide-in {
+  animation: slideInRight 0.5s ease forwards; /* Text slides in from the right */
+}
+
+.aboutus {
+  opacity: 1; /* Start with zero opacity */
+  transition: opacity 0.5s ease-in-out; /* Smooth fade in */
+}
+
+.aboutus.animate {
+  opacity: 1; /* Fade in effect */
+}
+
+/* ---------------------------        Gallery Homepage Hover Animation -------------------------------- */
+
+/* Wrapper for gallery images */
+.gallery-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay that appears on hover */
+.gallery-image-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(190, 147, 66, 0.9); /* Semi-transparent dark overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text inside the overlay */
+.gallery-image-wrapper .check-in-text {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effect to show overlay and text */
+.gallery-image-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+.gallery-image-wrapper:hover .check-in-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add these styles to your CSS file */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.4s forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.4s forwards;
+}
+
+.hidden {
+  opacity: 0; /* Initially hidden */
+}
+
+/* ----------Navbar css------- */
+@media (max-width: 576px) {
+  .nav_button {
+    margin-top: 15px !important; /* Add important if you need to override other styles */
+  }
+  .nav-link:hover {
+    width: 25%;
+  }
+}
+@media (max-width: 1024px) {
+  .nav_button {
+    margin-top: 15px !important; /* Add important if you need to override other styles */
+  }
+  .nav-link:hover {
+    width: 25%;
+  }
+}

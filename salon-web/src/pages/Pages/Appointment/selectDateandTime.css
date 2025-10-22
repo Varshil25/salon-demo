@@ -1,0 +1,149 @@
+/* -------------------------------------------- Custom Flatpickr Calendar Styles -------------------------------- */
+
+.flatpickr-calendar {
+  color: #333; /* Text color */
+}
+
+.flatpickr-day {
+  background-color: #ffffff; /* Day cell background */
+  color: #000000; /* Day cell text */
+  border-radius: 4px; /* Rounded corners for day cells */
+}
+
+.flatpickr-day:hover {
+  background-color: #be9342; /* Hover effect on day cells */
+  color: #ffffff;
+}
+
+.flatpickr-day.selected {
+  background-color: #be9342; /* Background for selected date */
+  color: #ffffff; /* Text color for selected date */
+  border: none;
+}
+
+.flatpickr-weekday {
+  background: #f5f7fa !important;
+  padding: 10px;
+  color: #000 !important;
+}
+
+.flatpickr-months {
+  background-color: #be9342;
+}
+
+.flatpickr-weekdays {
+  background-color: transparent !important;
+  border-bottom: none;
+}
+
+.flatpickr-day.today {
+  position: relative; /* To position the dot relative to today's date */
+  color: #be9342;
+  border: none;
+  background-color: transparent;
+}
+
+.flatpickr-day.today::after {
+  content: "."; /* Creates the dot */
+  position: absolute;
+  bottom: -7px; /* Adjust this to position the dot below the date */
+  left: 50%; /* Centers the dot horizontally */
+  transform: translateX(-50%); /* Ensures the dot is perfectly centered */
+  font-size: 24px; /* Adjust the size of the dot */
+  color: #be9342; /* Color of the dot, change as needed */
+}
+
+/* -------------------------------------------- UI -------------------------------- */
+.date-picker-wrapper {
+  display: flex;
+  gap: 10px; /* Adjust the gap between the Flatpickr and the icon */
+  justify-content: center;
+}
+
+.date-picker-wrapper .date_time_pick {
+  flex: 1; /* Allows the input field to take available space */
+}
+
+.date-picker-wrapper .calendar-icon {
+  width: 30px; /* Adjust the icon size */
+  height: 30px; /* Keep the icon square */
+  cursor: pointer; /* Optional: shows it's interactive */
+}
+.date_time_pick {
+  padding: 5px 15px;
+}
+
+/* -------------------------------------------- Dropdown -------------------------------- */
+
+.dropdown-container {
+  margin-top: 10px;
+}
+
+.dropdown-header {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #be9342;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-body {
+  width: 100%; /* Full width of the dropdown */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: thin; /* For modern browsers, make scrollbar thin */
+  scrollbar-color: #be9342 transparent; /* Customize scrollbar color */
+}
+
+.dropdown-itemm {
+  padding: 8px 12px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 0.75px solid #979797;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-itemm:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .date-picker-wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .calendar-icon {
+    position: static;
+  }
+
+  .dropdown-header {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdown-body {
+    width: 100%;
+  }
+}

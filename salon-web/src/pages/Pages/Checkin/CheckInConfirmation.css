@@ -1,0 +1,70 @@
+.checkin-container {
+  background: linear-gradient(135deg, #fff);
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+
+  padding: 50px 0px;
+}
+
+.text-center_final {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content in left section */
+}
+
+.card-custom-width {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.list-group-item {
+  border: none;
+  cursor: pointer;
+  padding: 15px 10px; /* Better padding */
+  font-size: 1rem;
+}
+
+.link-hover {
+  text-decoration: none; /* Remove default underline */
+}
+
+.link-hover:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.list-group-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.badge {
+  border-radius: 6px;
+}
+
+.services_list {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-right: 8px;
+  background-color: white;
+  border: 2px dotted #be9342;
+  border-radius: 12px;
+  color: #be9342;
+  font-size: 12px;
+  white-space: nowrap;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+}
+.hover-effect {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: scale(1.2); /* Make the icon larger on hover */
+  color: #007bff; /* Change color on hover */
+}

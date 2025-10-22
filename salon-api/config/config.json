@@ -1,0 +1,32 @@
+{
+  "development": {
+  "url": "postgres://default:X3eEbA8tcwlp@ep-misty-mountain-a4tj0357-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require",
+  "dialect": "postgres",
+  "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "test": {
+    "url": "postgres://default:X3eEbA8tcwlp@ep-misty-mountain-a4tj0357-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "production": {
+  "url": "postgres://default:X3eEbA8tcwlp@ep-misty-mountain-a4tj0357-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require",
+  "dialect": "postgres",
+  "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}

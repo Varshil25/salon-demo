@@ -1,0 +1,31 @@
+.loader-fullscreen {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../assets/images/home_page/loader_background.jpg"); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire loader */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  z-index: 9999; /* Keeps it on top of all other content */
+}
+
+.loader-logo {
+  width: 150px;
+  height: 150px;
+  animation: loader-blink 1s ease-in-out infinite;
+}
+
+@keyframes loader-blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

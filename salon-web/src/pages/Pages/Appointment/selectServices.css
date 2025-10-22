@@ -1,0 +1,339 @@
+/* HaircutCard.css */
+
+/* Card Styling */
+.haircut-card {
+  width: auto;
+  height: 90px;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: inset 0px 0px 0px #e5e5e5;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Text Styling */
+.haircut-card h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #0d1619;
+  margin: 0;
+  width: 136px;
+}
+
+.haircut-card p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 15px;
+  margin: 0;
+}
+
+.haircut-card .duration {
+  color: #757676;
+  width: 100%;
+}
+
+.haircut-card .price {
+  font-weight: 500;
+  color: #0d1619;
+  width: 100px;
+}
+
+/* Button Styling */
+.haircut-card .add-button {
+  width: 21px;
+  height: 21px;
+  background: #f2f2f2;
+  border-radius: 6px;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SVG Icon Styling */
+.haircut-card .add-button svg {
+  width: 12px;
+  height: 12px;
+}
+
+/*--------------------------------------------------- */
+
+/* Scrollable Services List */
+.services-list {
+  max-height: 550px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Right Side: Selected Services */
+.selected-services {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.selected-services h3 {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.selected-services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.selected-services ul li {
+  margin-bottom: 8px;
+}
+
+.selected-services h4 {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.continue-button {
+  width: 100%;
+  background-color: #f2f2f2;
+  color: #0d1619;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/*---------------------------------------------------------------------------------------------------------------- */
+/* Responsive Design */
+@media (max-width: 768px) {
+  .haircut-card {
+    width: 100%; /* Full width on smaller screens */
+    height: 80px;
+    margin-bottom: 16px;
+  }
+
+  .services-list {
+    max-height: unset; /* Allow full height in mobile view */
+    padding-right: 0px;
+  }
+
+  .selected-services {
+    margin-top: 16px;
+  }
+
+  .continue-button {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .haircut-card {
+    width: 100%; /* Adjust to fit tablet screens */
+  }
+
+  .selected-services {
+    padding: 20px;
+  }
+}
+
+/* .selected-services {
+  background: #fff;
+  padding: 16px;
+  border-radius: 5px;
+  border: 0.75px solid #e5e5e5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.service_img {
+  display: flex;
+  gap: 15px;
+}
+
+.service_img img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.salon_detailss {
+  display: flex;
+  flex-direction: column;
+}
+
+.service_salon_name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.service_salon_address {
+  font-size: 12px;
+  font-weight: 400;
+  color: #757676;
+  margin-top: 4px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  margin: 8px 0;
+}
+
+.continue-button {
+  width: 100%;
+  background: #be9342;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.continue-button:hover {
+  background: #a57f37;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .selected-services {
+    padding: 12px;
+  }
+
+  .service_salon_name,
+  .service_salon_address,
+  ul li,
+  h4 {
+    font-size: 11px;
+  }
+
+  .service_img {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .continue-button {
+    width: 100%;
+  }
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.service-details {
+  flex: 1;
+}
+
+.service-price {
+  text-align: right;
+  min-width: 100px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.total-price {
+  text-align: right; /* Aligns the price to the right */
+  min-width: 100px; /* Optional: ensures a minimum width to avoid text wrapping */
+}
+.duration {
+  font-size: 0.9em;
+  color: #757676;
+  margin-bottom: 0px;
+}
+
+/* Style the info icon */
+.info-icon {
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 8px;
+  color: #be9342;
+  position: relative;
+}
+
+/* Tooltip text */
+.info-icon[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* Searchbar */
+.search-container {
+  gap: 0px; /* Adds spacing between elements */
+}
+
+.search-input {
+  border-radius: 10px 0 0 10px;
+  padding: 9px 15px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+  font-size: 14px;
+}
+
+.search-button {
+  background-color: #be9342; /* Stylish gold color */
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0 10px 10px 0;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #fff;
+  color: #be9342;
+  border: 0.5px solid #be9342;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input {
+    border-radius: 10px; /* Full rounded corners on mobile */
+  }
+
+  .search-button {
+    border-radius: 10px;
+    margin-top: 8px; /* Adds spacing between input and button */
+  }
+}
