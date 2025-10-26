@@ -1,4 +1,3 @@
-const twilio = require("twilio");
 const { parsePhoneNumberFromString } = require("libphonenumber-js");
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
@@ -9,13 +8,15 @@ const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
 // so the app can run in environments where Twilio isn't configured (e.g. dev/test).
 const useTwilio = Boolean(accountSid && authToken && twilioPhoneNumber);
 
-if (!useTwilio) {
+let client = null;
+if (useTwilio) {
+  const twilio = require("twilio");
+  client = twilio(accountSid, authToken);
+} else {
   console.warn(
     "Twilio environment variables are missing. SMS messages will be logged but not sent."
   );
 }
-
-const client = useTwilio ? twilio(accountSid, authToken) : null;
 
 // Function to validate phone numbers
 const validatePhoneNumber = (phoneNumber) => {
