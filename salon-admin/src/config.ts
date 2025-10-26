@@ -28,7 +28,7 @@ const config: Config = {
     APP_ID: "",
   },
   api: {
-    API_URL: "https://api.orioniktechnologies.com/api",
+    API_URL: "http://localhost:5000/api",
   },
 };
 
